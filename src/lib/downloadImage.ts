@@ -33,6 +33,7 @@ export async function downloadFromS3(
 
     // Generate a presigned URL for the object
     const url = getSignedUrl(s3, command, { expiresIn: 3600 });
+
     return url;
   } catch (error) {
     console.error(error);

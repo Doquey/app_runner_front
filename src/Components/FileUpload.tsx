@@ -57,7 +57,7 @@ const FileUpload = ({ task }: Props) => {
             filename,
             bucketname,
           });
-          setimagePath(res.data.url);
+          setimagePath(res.data.file_path);
         } else {
           console.error("Error:", response.statusText);
         }
@@ -68,6 +68,7 @@ const FileUpload = ({ task }: Props) => {
       }
     }
   };
+  console.log(imagePath);
   return (
     <div>
       <input type="file" onChange={handleImageChange} />
